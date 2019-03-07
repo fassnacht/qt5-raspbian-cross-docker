@@ -1,0 +1,15 @@
+--- qt-everywhere-opensource-src-5.9.7/qtbase/mkspecs/devices/linux-rasp-pi3-g++/qmake.conf     2018-10-16 08:37:05.000000000 +0000
++++ qt-everywhere-opensource-src-5.9.7/qtbase/mkspecs/devices/linux-rasp-pi3-g++/qmake_mod.conf 2019-03-06 22:12:33.511260000 +0000
+@@ -26,10 +26,10 @@
+
+ QMAKE_INCDIR_OPENGL_ES2 = $${QMAKE_INCDIR_EGL}
+
+-QMAKE_LIBS_OPENGL_ES2   = $${VC_LINK_LINE} -lGLESv2
++QMAKE_LIBS_OPENGL_ES2   = $${VC_LINK_LINE} -lbrcmGLESv2
+
+ # The official opt vc EGL references GLESv2 symbols: need to link it
+-QMAKE_LIBS_EGL          = $${VC_LINK_LINE} -lEGL -lGLESv2
++QMAKE_LIBS_EGL          = $${VC_LINK_LINE} -lbrcmEGL -lbrcmGLESv2
+
+ QMAKE_CFLAGS            = -march=armv8-a -mtune=cortex-a53 -mfpu=crypto-neon-fp-armv8
+ QMAKE_CXXFLAGS          = $$QMAKE_CFLAGS
